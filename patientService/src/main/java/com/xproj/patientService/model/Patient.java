@@ -1,11 +1,17 @@
 package com.xproj.patientService.model;
 
 import jakarta.persistence.*;
+import lombok.*;
 
 import java.time.LocalDate;
 import java.util.UUID;
 
 @Entity
+@Getter
+@Setter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Patient {
 
     @Id
@@ -21,5 +27,6 @@ public class Patient {
     @Column(nullable = false)
     private LocalDate dateOfBirth;
     @Column(nullable = false)
-    private LocalDate registrationDate;
+    private LocalDate registeredDate;
+
 }

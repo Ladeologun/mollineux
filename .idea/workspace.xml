@@ -5,33 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="186a2845-49a5-4a7b-b2ac-d45efab3a5a4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patientManagementSystem.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patientService/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patientService/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patientService/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patientService/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patientService/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patientService/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patientService/src/main/java/com/xproj/patientService/PatientServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patientService/src/main/java/com/xproj/patientService/model/Patient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patientService/src/main/resources/application.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patientService/src/test/java/com/xproj/patientService/PatientServiceApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/patientService/src/main/java/com/xproj/patientService/controller/PatientController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/patientService/src/main/java/com/xproj/patientService/dto/PatientRequestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/patientService/src/main/java/com/xproj/patientService/dto/PatientResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/patientService/src/main/java/com/xproj/patientService/exception/EmailAlreadyExistException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/patientService/src/main/java/com/xproj/patientService/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/patientService/src/main/java/com/xproj/patientService/mapper/PatientMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/patientService/src/main/java/com/xproj/patientService/repository/PatientRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/patientService/src/main/java/com/xproj/patientService/service/PatientService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/patientService/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patientService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/patientService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patientService/src/main/java/com/xproj/patientService/PatientServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/patientService/src/main/java/com/xproj/patientService/PatientServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patientService/src/main/java/com/xproj/patientService/model/Patient.java" beforeDir="false" afterPath="$PROJECT_DIR$/patientService/src/main/java/com/xproj/patientService/model/Patient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patientService/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/patientService/src/main/resources/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -57,14 +58,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "jdk.selected.JAVA_MODULE": "corretto-20"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-20&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.import&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="PatientServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.xproj.patientService.PatientServiceApplication" />
