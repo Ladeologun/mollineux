@@ -1,5 +1,7 @@
 package com.xproj.patientService.dto;
 
+import com.xproj.patientService.dto.validationGroups.CreatePatientValidationGroup;
+import com.xproj.patientService.model.Patient;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -8,6 +10,8 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.time.LocalDate;
 
 
 @AllArgsConstructor
@@ -33,7 +37,26 @@ public class PatientRequestDTO {
     @NotBlank(message = "Date of birth is required")
     private String dateOfBirth;
 
-    @NotBlank(message = "Registration date is required")
-    @NotNull(message = "Registration date cannot be null") // notnull is necessary here as notBlank covers it
+    @NotBlank(groups = CreatePatientValidationGroup.class, message = "Registration date is required")
+    @NotNull(groups = CreatePatientValidationGroup.class,  message = "Registration date cannot be null") // notnull is necessary here as notBlank covers it
     private String registeredDate;
+
+    public Patient updatePatientFromRequest(Patient patient){
+        if(this.name != null){
+            patient.setName(name);
+        }
+        if(this.address != null){
+            patient.setAddress(address);
+        }
+        if(this.dateOfBirth != null){
+            patient.setDateOfBirth(LocalDate.parse(dateOfBirth));
+        }
+        // just trying out how this will react with registeredDate excluded in update request dto
+        // using the validation groups
+        if(this.registeredDate != null){
+            patient.setRegisteredDate(LocalDate.parse(registeredDate));
+        }
+
+        return patient;
+    }
 }

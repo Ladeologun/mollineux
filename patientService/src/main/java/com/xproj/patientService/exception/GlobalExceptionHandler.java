@@ -37,4 +37,27 @@ public class GlobalExceptionHandler {
         log.warn(ex.getMessage());
         return ResponseEntity.badRequest().body(errors);
     }
+
+    @ExceptionHandler(PatientNotfoundException.class)
+    public ResponseEntity<Map<String, String>> handlePatientNotfoundException(
+            PatientNotfoundException ex
+    ){
+        Map<String, String> errors = new HashMap<>();
+        errors.put("status","failure");
+        errors.put("message", ex.getMessage());
+        log.warn(ex.getMessage());
+        return ResponseEntity.badRequest().body(errors);
+    }
+
+    @ExceptionHandler(EmailCannotBeChangedException.class)
+    public ResponseEntity<Map<String, String>> handleEmailCannotBeChangedException(
+            EmailCannotBeChangedException ex
+    ){
+        Map<String, String> errors = new HashMap<>();
+        errors.put("status","failure");
+        errors.put("message", ex.getMessage());
+        log.warn(ex.getMessage());
+        return ResponseEntity.badRequest().body(errors);
+    }
+
 }
