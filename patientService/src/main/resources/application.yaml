@@ -2,9 +2,9 @@ spring:
   application:
     name: patientService
   datasource:
-    url: jdbc:postgresql://localhost:5432/patientManagement
-    username: postgres
-    password: password
+    url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/patientManagement}
+    username: ${DATABASE_USERNAME:postgres} #postgres
+    password: ${DATABASE_PASSWORD:password} #password
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
