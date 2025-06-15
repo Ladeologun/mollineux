@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/billingService/billingService.iml" filepath="$PROJECT_DIR$/billingService/billingService.iml" />
       <module fileurl="file://$PROJECT_DIR$/patientManagementSystem.iml" filepath="$PROJECT_DIR$/patientManagementSystem.iml" />
     </modules>
   </component>
