@@ -5,6 +5,7 @@ import com.xproj.patientService.dto.PatientResponseDTO;
 import com.xproj.patientService.exception.EmailAlreadyExistException;
 import com.xproj.patientService.exception.EmailCannotBeChangedException;
 import com.xproj.patientService.exception.PatientNotfoundException;
+import com.xproj.patientService.grpc.BillingServiceGrpcClient;
 import com.xproj.patientService.mapper.PatientMapper;
 import com.xproj.patientService.model.Patient;
 import com.xproj.patientService.repository.PatientRepository;
@@ -19,6 +20,7 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class PatientService {
     private final PatientRepository patientRepository;
+    private final BillingServiceGrpcClient billingServiceGrpcClient;
 
     public List<PatientResponseDTO> getPatients() {
         List<Patient> patients = patientRepository.findAll();
@@ -33,6 +35,9 @@ public class PatientService {
 
         Patient patient = PatientMapper.toModel(patientRequestDTO);
         Patient savedPatient = patientRepository.save(patient);
+
+        billingServiceGrpcClient.createBillingAccount(savedPatient.getId().toString(),
+                savedPatient.getName(), savedPatient.getEmail());
         return PatientMapper.toResponseDTO(savedPatient);
     }
 
