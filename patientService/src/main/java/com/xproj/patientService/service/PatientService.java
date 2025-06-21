@@ -6,6 +6,7 @@ import com.xproj.patientService.exception.EmailAlreadyExistException;
 import com.xproj.patientService.exception.EmailCannotBeChangedException;
 import com.xproj.patientService.exception.PatientNotfoundException;
 import com.xproj.patientService.grpc.BillingServiceGrpcClient;
+import com.xproj.patientService.kafka.KafkaProducer;
 import com.xproj.patientService.mapper.PatientMapper;
 import com.xproj.patientService.model.Patient;
 import com.xproj.patientService.repository.PatientRepository;
@@ -21,6 +22,7 @@ import java.util.stream.Collectors;
 public class PatientService {
     private final PatientRepository patientRepository;
     private final BillingServiceGrpcClient billingServiceGrpcClient;
+    private final KafkaProducer kafkaProducer;
 
     public List<PatientResponseDTO> getPatients() {
         List<Patient> patients = patientRepository.findAll();
@@ -38,6 +40,8 @@ public class PatientService {
 
         billingServiceGrpcClient.createBillingAccount(savedPatient.getId().toString(),
                 savedPatient.getName(), savedPatient.getEmail());
+
+        kafkaProducer.sendMessage(savedPatient);
         return PatientMapper.toResponseDTO(savedPatient);
     }
 
