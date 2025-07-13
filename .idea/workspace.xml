@@ -5,9 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="186a2845-49a5-4a7b-b2ac-d45efab3a5a4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/apiGateway/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apiGateway/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apiGateway/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apiGateway/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apiGateway/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apiGateway/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apiGateway/src/main/java/com/xproj/apiGateway/ApiGatewayApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apiGateway/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apiGateway/src/test/java/com/xproj/apiGateway/ApiGatewayApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/PatientManagementArch.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/PatientManagementArchtecture.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,29 +57,45 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "com.codeium.enabled": "true",
-    "git-widget-placeholder": "main",
-    "jdk.selected.JAVA_MODULE": "corretto-20",
-    "last_opened_file_path": "/Users/ladeologun/Desktop/patientManagementSystem/images",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;com.codeium.enabled&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-20&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/ladeologun/Desktop/patientManagementSystem/images&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/images" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.BillingServiceApplication">
+  <component name="RunManager" selected="Application.ApiGatewayApplication">
     <configuration name="AnalyticsServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.xproj.analyticsService.AnalyticsServiceApplication" />
       <module name="analyticsService" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.xproj.analyticsService.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApiGatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.xproj.apiGateway.ApiGatewayApplication" />
+      <module name="apiGateway" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xproj.apiGateway.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -106,32 +132,6 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration name="DockerisedPatienceServiceContainer" type="docker-deploy" factoryName="docker-image" temporary="true" server-name="Docker">
-      <deployment type="docker-image">
-        <settings>
-          <option name="imageTag" value="patientservice:v1" />
-          <option name="containerName" value="" />
-          <option name="envVars">
-            <list>
-              <DockerEnvVarImpl>
-                <option name="name" value="DATABASE_URL" />
-                <option name="value" value="jdbc:postgresql://host.docker.internal:5432/patientManagement" />
-              </DockerEnvVarImpl>
-            </list>
-          </option>
-          <option name="portBindings">
-            <list>
-              <DockerPortBindingImpl>
-                <option name="containerPort" value="4000" />
-                <option name="hostPort" value="4041" />
-              </DockerPortBindingImpl>
-            </list>
-          </option>
-          <option name="showCommandPreview" value="true" />
-        </settings>
-      </deployment>
-      <method v="2" />
     </configuration>
     <configuration name="KafkaContainer" type="docker-deploy" factoryName="docker-image" temporary="true" server-name="Docker">
       <deployment type="docker-image">
@@ -196,11 +196,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.BillingServiceApplication" />
-        <item itemvalue="Application.AnalyticsServiceApplication" />
+        <item itemvalue="Application.ApiGatewayApplication" />
         <item itemvalue="Application.PatientServiceApplication" />
+        <item itemvalue="Application.BillingServiceApplication" />
         <item itemvalue="Docker.KafkaContainer" />
-        <item itemvalue="Docker.DockerisedPatienceServiceContainer" />
+        <item itemvalue="Application.AnalyticsServiceApplication" />
       </list>
     </recent_temporary>
   </component>
